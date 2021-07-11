@@ -22,16 +22,18 @@ nav
   z-index: 100;
 }
 
-.logo
-{
-  width: 160px;
-  height: 45px;
-}
+
 
 .nav-left
 {
   display: flex;
   align-items: center;
+}
+
+.logo
+{
+  width: 150px;
+  height: 40px;
 }
 
 .nav-right
@@ -48,6 +50,6 @@ nav
 
 .nav-right ul img
 {
-  width: 22px;
-  margin: 0 5px;
+  width: 23px;
+  margin: 0 7px;
 }
