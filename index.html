@@ -41,13 +41,13 @@
 
     </nav>
 
-    <div class="posts">
+    <form class="posts" action="." method="post">
       
       <h2>Title</h2>
-      <input type="text" placeholder="Title">
+      <input type="text" name="title" placeholder="Title">
       
       <h2>Description</h2>
-      <textarea input class="des" type="text" placeholder="Description"></textarea>
+      <textarea input class="des" name="description"type="text" placeholder="Description"></textarea>
       
       <h2>Image(Optional)</h2>
       <input type="file" name="inpFile" id="inpFile" class="img-btn">
@@ -55,9 +55,13 @@
       <div class="img-prev" id="imgPrev">
         <img src="" alt="Image Preview" class="img-prev__img">
         <span class="img-prev__def-text">Image Preview</span>
-      </div>  
+      </div>
 
-    </div>
+      <input type="submit" value="Submit">
+
+    </form>
+
+    
     <script>
     const inpFile = document.getElementById("inpFile");
     const prevCont = document.getElementById("imgPrev");
