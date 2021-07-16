@@ -12,7 +12,9 @@ body
 
 .and
 {
-  display: none; 
+  display: none;
+  font-size:auto;
+  color:white;
 }
 
 nav 
