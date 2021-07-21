@@ -24,77 +24,94 @@
       
       <div class="nav-right">
         <ul>
-          <li><a href="index.html"><img src="asstes_navbar/home.png"></a></li>
+          <li><a href="index.html"><img src="asstes/asstes_navbar/home.png"></a></li>
 
-          <li><a href="chat.html"><img src = "asstes_navbar/chat.png"></a></li>
+          <li><a href="chat.html"><img src = "asstes/asstes_navbar/chat.png"></a></li>
           
           <li><a href="activity.html">
-          <img src = "asstes_navbar/activity.png"></a></li>
+          <img src = "asstes/asstes_navbar/activity.png"></a></li>
 
           <li><a href="explore.html">
-          <img src = "asstes_navbar/compass.png"></a></li>
+          <img src = "asstes/asstes_navbar/compass.png"></a></li>
 
         </ul>         
           
       </div>
-      <img src="asstes_navbar/menu.png" class="menu-icon">
+      <img src="asstes/asstes_navbar/menu.png" class="menu-icon">
 
     </nav>
 
-    <form class="posts" action="." method="post">
+
+
+
+
+
+
+
+
+
+
+    <div class="post">
       
-      <h2>Title</h2>
-      <input type="text" name="title" placeholder="Title">
+      <button id="open_modal"><img src="asstes-home/post.png"></button>
+
       
-      <h2>Description</h2>
-      <textarea input class="des" name="description"type="text" placeholder="Description"></textarea>
-      
-      <h2>Image(Optional)</h2>
-      <input type="file" name="inpFile" id="inpFile" class="img-btn">
-      
-      <div class="img-prev" id="imgPrev">
-        <img src="" alt="Image Preview" class="img-prev__img">
-        <span class="img-prev__def-text">Image Preview</span>
+      <div id="modal" class="modal">
+        <div class="header">
+          <h2>Post</h2>
+        </div>
+
+        <hr>
+
+        <form>
+          <label>Title</label>
+          <input type="text" id="title" class="title" placeholder="Title">
+
+          <label>Description</label>          
+          <textarea input id="des" type="text" class="des" placeholder="Description"></textarea>
+
+          <button id="post_btn" type="button" class="post_btn" onclick="modal()">Post</button>
+        </form>
+          
+        <div  class="close">
+          <button  id="close_modal" class="close_modal" >Cancel</button>
+        </div>
+          
+
       </div>
 
-      <input type="submit" value="Submit">
-
-    </form>
-
-    
-    <script>
-    const inpFile = document.getElementById("inpFile");
-    const prevCont = document.getElementById("imgPrev");
-    const prevImg = prevCont.querySelector(".img-prev__img");
-    const prevDefTxt = prevCont.querySelector(".img-prev__def-text");
-    
-    inpFile.addEventListener("change", function()
-    {
-      const file = this.files[0];
       
-      if(file)
-      {
-        const reader = new FileReader();
-        
-        prevDefTxt.style.display = "none";
-        prevImg.style.display = "block";
-        
-        reader.addEventListener("load", function()
-        {
-          prevImg.setAttribute("src", this.result);
-        });
-        
-        reader.readAsDataURL(file);
-      }
-      else
-      {
-        prevDefTxt.style.display = null;
-        prevImg.style.display = null;        
-      }
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       
-    });
-    </script>
+
+    
+
+    
+    <script src="html/script.js"></script>
 
 
     </div>
